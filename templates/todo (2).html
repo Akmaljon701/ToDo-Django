@@ -58,17 +58,19 @@
   <div class="row">
 
     <div class="col-md-8">
+      {% for i in vazifalar %}
       <div class="card">
-        <center><b>Title of the todo</b></center>
+        <center><b>{{ i.sarlavha }}</b></center>
         <hr/>
-        Todo time
+        {{ i.vaqt }}
         <hr/>
-        Todo description
+        {{ i.malumot }}
         <hr/>
-        Todo status
+        {{ i.holat }}
         <br />
         <button class="btn btn-primary" style="float: right;"><span class="glyphicon glyphicon-trash"></span><a href="#">O'chirish</a></button>
       </div>
+      {% endfor %}
     </div>
     <div class="col-md-1"> </div>
     <div class="col-md-3" >
