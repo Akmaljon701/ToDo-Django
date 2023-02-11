@@ -6,4 +6,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('home/', asosiy),
     path('delete/<int:son>/', delete),
+    path('edit/<int:son>/', edit),
 ]

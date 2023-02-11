@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit</title>
+</head>
+<body>
+    <form method="post"> {% csrf_token %}
+        <label>Title:</label>
+        <input type="text" name="s" value="{{ vazifa.sarlavha }}"><br><br>
+
+        <label>Time:</label>
+        <input type="text" name="v" value="{{ vazifa.vaqt }}"><br><br>
+
+        <label>Descriptio:</label>
+        <input type="text" name="m" value="{{ vazifa.malumot }}"><br><br>
+
+        <label>Descriptio:</label>
+        <select name="h">
+            <option>Boshlandi</option>
+            <option>Bajarilmoqda</option>
+            <option>Bajarildi</option>
+        </select>
+        <br>
+        <br>
+        <button type="submit">Save</button>
+    </form>
+</body>
+</html>

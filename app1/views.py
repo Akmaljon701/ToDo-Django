@@ -19,3 +19,17 @@ def delete(request, son):
     ish.delete()
 
     return redirect('/home/')
+
+def edit(request, son):
+    if request.method == 'POST':
+        Kundalik.objects.filter(id=son).update(
+        sarlavha=request.POST.get('s'),
+        vaqt=request.POST.get('v'),
+        malumot=request.POST.get('m'),
+        holat=request.POST.get('h')
+        )
+        return redirect(f"/home/")
+    data = {
+        'vazifa': Kundalik.objects.get(id=son)
+    }
+    return render(request, 'todo_edit.html', data)

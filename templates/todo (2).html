@@ -60,15 +60,17 @@
     <div class="col-md-8">
       {% for i in vazifalar %}
       <div class="card">
-        <center><b>{{ i.sarlavha }}</b></center>
+        <center><b>Title: {{ i.sarlavha }}</b></center>
         <hr/>
-        {{ i.vaqt }}
+        <b>Time:</b> {{ i.vaqt }}
         <hr/>
-        {{ i.malumot }}
+        <b>Descriptio:</b> {{ i.malumot }}
         <hr/>
-        {{ i.holat }}
-        <br />
-        <button class="btn btn-primary" style="float: right;"><span class="glyphicon glyphicon-trash"></span><a href="/delete/{{ i.id }}/">O'chirish</a></button>
+        <b>Status:</b> {{ i.holat }}
+        <br /> <br>
+        <a href="/delete/{{ i.id }}/"><button class="btn btn-primary" style="float: right;"><span class="glyphicon glyphicon-trash"></span> O'chrish</button></a>
+        <a href="/edit/{{ i.id }}/"><button class="btn btn-primary" style="float:">O'zgartirish</button></a>
+
       </div>
       {% endfor %}
     </div>
