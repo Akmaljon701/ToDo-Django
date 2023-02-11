@@ -5,4 +5,5 @@ from app1.views import *
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('home/', asosiy),
+    path('delete/<int:son>/', delete),
 ]
