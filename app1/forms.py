@@ -4,4 +4,4 @@ from .models import *
 class AddForm(forms.ModelForm):
     class Meta:
         model = Kundalik
-        fields = '__all__'
+        fields = ('sarlavha', 'vaqt', 'malumot', 'holat')
